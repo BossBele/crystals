@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html class="loading" lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Crystals</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/uikit@3.5.7/dist/css/uikit.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="rippleJs/ripple.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body class="container px-0" style="">
+    <section>
+      <a href="index.html">
+        <div
+          class="uk-cover-container mx-auto rounded-circle bg-white"
+          style="height: 60px; width: 60px"
+        >
+          <img src="logo.png" alt="logo" uk-cover />
+        </div>
+      </a>
+      <div class="modal-dialog mt-0">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Sign Up</h5>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group row">
+                <div class="col">
+                  <label>First Name</label>
+                  <input type="text" class="form-control" />
+                </div>
+                <div class="col">
+                  <label>Last Name</label>
+                  <input type="text" class="form-control" />
+                </div>
+              </div>
+              <div>
+                <label>Username</label>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">@</span>
+                  </div>
+                  <input
+                    type="text"
+                    class="form-control"
+                    aria-label="Username"
+                    aria-describedby="basic-addon1"
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Join as a</label>
+                <div class="row w-100 mx-auto">
+                  <div class="col form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="exampleRadios"
+                      id="exampleRadios1"
+                      value="option1"
+                      checked
+                      uk-toggle=".mentorees"
+                    />
+                    <label class="form-check-label" for="exampleRadios1">
+                      Mentee
+                    </label>
+                  </div>
+                  <div class="col form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="exampleRadios"
+                      id="exampleRadios2"
+                      value="option2"
+                      uk-toggle=".mentorees"
+                    />
+                    <label class="form-check-label" for="exampleRadios2">
+                      Mentor
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="mentorees" for="exampleFormControlSelect2"
+                  >Interests</label
+                >
+                <label class="mentorees" for="exampleFormControlSelect2" hidden
+                  >Subjects</label
+                >
+                <select
+                  multiple
+                  class="form-control"
+                  id="exampleFormControlSelect2"
+                >
+                  <option>Entrepreneurship</option>
+                  <option>Modelling</option>
+                  <option>ICT</option>
+                  <option>Finances</option>
+                  <option>Poetry</option>
+                  <option>Basketball</option>
+                </select>
+              </div>
+              <div>
+                <label>Phone</label>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon2">+255</span>
+                  </div>
+                  <input
+                    type="number"
+                    class="form-control"
+                    aria-describedby="basic-addon2"
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Email</label>
+                <input type="email" class="form-control" />
+              </div>
+              <div class="form-group row">
+                <div class="col">
+                  <label class="text-truncate w-100">Password</label>
+                  <input type="password" class="form-control" />
+                </div>
+                <div class="col">
+                  <label class="text-truncate w-100">Confirm Password</label>
+                  <input type="password" class="form-control" />
+                </div>
+              </div>
+              <button
+                type="button"
+                class="btn btn-primary"
+                onclick="$('.modal').modal('hide');
+                UIkit.notification({message: `Sign Up Successful`});
+                setTimeout(() => {
+                  window.location.href = 'home.html'
+                }, 1500);"
+                data-ripple=""
+              >
+                Create Account
+              </button>
+            </form>
+            <small
+              class="text-muted row w-100 mx-auto align-items-center justify-content-center"
+            >
+              Already have an account?
+              <button
+                type="button"
+                class="btn btn-link"
+                onclick="$('.modal').modal('hide'); $('#signin-modal').modal('show');"
+              >
+                <small><b>Sign In</b></small>
+              </button>
+            </small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="signin-modal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Sign In</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label>Phone</label>
+                <input type="tel" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label>Password</label>
+                <input type="password" class="form-control" />
+              </div>
+              <button
+                type="button"
+                class="btn btn-primary"
+                onclick="$('.modal').modal('hide');
+                UIkit.notification({message: `Sign In Successful`});
+                setTimeout(() => {
+                  window.location.href = 'home.html'
+                }, 1500);"
+                data-ripple=""
+              >
+                Sign In
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.7/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/BossBele/belerise@latest/belerise.js"></script>
+    <script src="preview.js" defer></script>
+    <script src="rippleJs/ripple.js" defer></script>
+    <script src="main.js" defer></script>
+    <script>
+      $(document).ready(function () {
+        setTimeout(() => {
+          $("html").removeClass("loading");
+        }, 1500);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,79 @@
+@font-face {
+  font-family: "Quicksand";
+  src: url("Quicksand/static/Quicksand-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Quicksand-Bold";
+  src: url("Quicksand/static/Quicksand-Bold.ttf");
+}
+
+html,
+* {
+  font-family: "Quicksand", sans-serif !important;
+}
+
+button,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+b,
+.font-weight-bold {
+  font-family: "Quicksand-Bold", sans-serif !important;
+}
+
+html {
+  -webkit-transition: background-color 1s;
+  transition: background-color 1s;
+}
+body {
+  max-width: 860px !important;
+}
+html,
+body {
+  /* For the loading indicator to be vertically centered ensure */
+  /* the html and body elements take up the full viewport */
+  min-height: 100%;
+}
+html.loading,
+html.loading body {
+  max-height: 100vh;
+  overflow: hidden;
+}
+html.loading {
+  /* Replace #333 with the background-color of your choice */
+  /* Replace loading.gif with the loading image of your choice */
+  background: rgba(255, 255, 255, 0.8) url("logo.png") no-repeat 50% 50%;
+  background-size: contain;
+
+  /* Ensures that the transition only runs in one direction */
+  -webkit-transition: background-color 0;
+  transition: background-color 0;
+}
+body {
+  -webkit-transition: opacity 1s ease-in;
+  transition: opacity 1s ease-in;
+}
+html.loading body {
+  /* Make the contents of the body opaque during loading */
+  opacity: 0;
+
+  /* Ensures that the transition only runs in one direction */
+  -webkit-transition: opacity 0;
+  transition: opacity 0;
+}
+
+.post-text {
+  font-size: 0.9rem;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1082;
+}

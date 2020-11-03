@@ -1,0 +1,886 @@
+<html class="loading" lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Crystals</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/uikit@3.5.7/dist/css/uikit.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="rippleJs/ripple.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body class="container px-0" style="margin-bottom: 48px">
+    <ul id="switcher" class="uk-switcher uk-margin" style="margin-top: 56px">
+      <li>
+        <section>
+          <header class="w-100 mx-auto row py-2" data-belerise="Inbox">
+            <div class="col d-flex justify-content-center border-bottom">
+              <h4 class="text-white mb-1">Home</h4>
+            </div>
+          </header>
+          <div class="col">
+            <p class="">
+              If you have problems in your lives and want to let them go,
+              Crystal will help give you the sense of optimism, courage,
+              strength in conquering your problems.
+            </p>
+          </div>
+          <div class="mb-3">
+            <h5 class="col border-bottom border-top py-2 mb-0">Quotes</h5>
+            <div
+              id="carouselExampleCaptions"
+              class="pt-2 carousel slide"
+              data-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <div class="col carousel-item active">
+                  <div class="">
+                    <p>
+                      If you’re always trying to be normal you will never know
+                      how amazing you can be.
+                    </p>
+                    <p class="text-primary">
+                      <b>~ Maya Angelou</b
+                      ><button class="btn btn-link save-quote" data-ripple="">
+                        <svg
+                          class="bi"
+                          width="24"
+                          height="24"
+                          fill="currentColor"
+                        >
+                          <use xlink:href="bootstrap-icons.svg#bookmark" />
+                        </svg>
+                      </button>
+                    </p>
+                  </div>
+                </div>
+                <div class="col carousel-item">
+                  <div class="">
+                    <p>
+                      The question isn’t who is going to let me; it’s who is
+                      going to stop me.
+                    </p>
+                    <p class="text-primary">
+                      <b>~ Ayn Rand</b>
+                      <button class="btn btn-link save-quote" data-ripple="">
+                        <svg
+                          class="bi"
+                          width="24"
+                          height="24"
+                          fill="currentColor"
+                        >
+                          <use xlink:href="bootstrap-icons.svg#bookmark" />
+                        </svg>
+                      </button>
+                    </p>
+                  </div>
+                </div>
+                <div class="col carousel-item">
+                  <div class="">
+                    <p>A girl should be two things: classy and fabulous.</p>
+                    <p class="text-primary">
+                      <b>~ Coco Chanel</b>
+                      <button class="btn btn-link save-quote" data-ripple="">
+                        <svg
+                          class="bi"
+                          width="24"
+                          height="24"
+                          fill="currentColor"
+                        >
+                          <use xlink:href="bootstrap-icons.svg#bookmark" />
+                        </svg>
+                      </button>
+                    </p>
+                  </div>
+                </div>
+                <div class="col carousel-item">
+                  <div class="">
+                    <p>
+                      You educate a man; you educate a man. You educate a woman;
+                      you educate a generation.
+                    </p>
+                    <p class="text-primary">
+                      <b>~ Brigham Young</b>
+                      <button class="btn btn-link save-quote" data-ripple="">
+                        <svg
+                          class="bi"
+                          width="24"
+                          height="24"
+                          fill="currentColor"
+                        >
+                          <use xlink:href="bootstrap-icons.svg#bookmark" />
+                        </svg>
+                      </button>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <a
+                class="carousel-control-prev"
+                href="#carouselExampleCaptions"
+                role="button"
+                data-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a
+                class="carousel-control-next"
+                href="#carouselExampleCaptions"
+                role="button"
+                data-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+          <div id="stories-feed">
+            <h5 class="col border-bottom border-top py-2 mb-0">Stories</h5>
+            <div
+              class="uk-cover-container uk-height-medium"
+              style="background-color: #e0e0e0"
+            >
+              <img src="post.webp" alt="post" uk-cover />
+            </div>
+            <div class="py-1" style="background-color: #e0e0e0">
+              <small><b>&ensp;Sangema Abdallah</b></small>
+            </div>
+            <p class="col py-2 post-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Temporibus labore, deserunt, omnis quos corrupti quis deleniti
+              nobis quibusdam cumque doloribus suscipit! Suscipit inventore
+              voluptates velit laudantium dolore voluptate non optio?
+            </p>
+          </div>
+          <label
+            for="story-file-input"
+            clTass="btn btn-link"
+            style="color: blue; position: fixed; bottom: 50px; right: 5px"
+          >
+            <svg
+              width="36px"
+              height="36px"
+              viewBox="0 0 16 16"
+              class="bi bi-plus-circle-fill"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"
+              />
+            </svg>
+          </label>
+        </section>
+      </li>
+      <li>
+        <section uk-filter="target: .interest-filter">
+          <header class="w-100 mx-auto row py-2" data-belerise="Inbox">
+            <div class="col d-flex justify-content-center border-bottom">
+              <h4 class="text-white mb-1">Mentorship</h4>
+            </div>
+          </header>
+          <div style="height: 44px" class="overflow-hidden">
+            <div
+              style="margin-top: -3px"
+              class="w-100 mx-auto row border-bottom align-items-center pt-1 pb-2 overflow-auto flex-nowrap"
+            >
+              <div class="px-1">
+                <button
+                  type="button"
+                  class="btn btn-link rounded-pill text-white text-truncate"
+                  data-ripple=""
+                  data-belerise="Burning Orange"
+                  uk-filter-control=".emotional-intelligence"
+                >
+                  Emotional Intelligence
+                </button>
+              </div>
+              <div class="px-1">
+                <button
+                  type="button"
+                  class="btn btn-link rounded-pill text-white text-truncate"
+                  data-ripple=""
+                  data-belerise="Vanusa"
+                  uk-filter-control=".relationships"
+                >
+                  Relationships
+                </button>
+              </div>
+              <div class="px-1">
+                <button
+                  type="button"
+                  class="btn btn-link rounded-pill text-white text-truncate"
+                  data-ripple=""
+                  data-belerise="Skyline"
+                  uk-filter-control=".entrepreneurship"
+                >
+                  Entrepreneurship
+                </button>
+              </div>
+              <div class="px-1">
+                <button
+                  type="button"
+                  class="btn btn-link rounded-pill text-white text-truncate"
+                  data-ripple=""
+                  data-belerise="Parklife"
+                  uk-filter-control=".modelling"
+                >
+                  Modelling
+                </button>
+              </div>
+              <div class="px-1">
+                <button
+                  type="button"
+                  class="btn btn-link rounded-pill text-white text-truncate"
+                  data-ripple=""
+                  data-belerise="Amin"
+                  uk-filter-control=".ict"
+                >
+                  ICT
+                </button>
+              </div>
+              <div class="px-1">
+                <button
+                  type="button"
+                  class="btn btn-link rounded-pill text-white text-truncate"
+                  data-ripple=""
+                  data-belerise="SoundCloud"
+                  uk-filter-control=".music"
+                >
+                  Music
+                </button>
+              </div>
+              <div class="px-1">
+                <button
+                  type="button"
+                  class="btn btn-link rounded-pill text-black-50 text-truncate"
+                  data-ripple=""
+                  data-belerise="Portrait"
+                  uk-filter-control=".interior-design"
+                >
+                  Interior Design
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="row no-gutters interest-filter">
+            <div class="col-6 entrepreneurship relationships">
+              <div class="card" style="width: 100%">
+                <img
+                  src="nyalandu.jpg"
+                  style="max-height: 200px; object-fit: cover"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h6 class="card-title">Faraja Nyalandu</h6>
+                  <p class="card-text post-text">
+                    Founder of Shule Direct and a mother of two. Some quick
+                    example text to build on the card title.
+                  </p>
+                  <button
+                    type="button"
+                    class="mentor-chat btn btn-primary"
+                    data-ripple=""
+                    data-name="Faraja Nyalandu"
+                  >
+                    Chat
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 emotional-intelligence">
+              <div class="card" style="width: 100%">
+                <img
+                  src="zahabian.jpg"
+                  style="max-height: 200px; object-fit: cover"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h6 class="card-title">Ashley Zahabian</h6>
+                  <p class="card-text post-text">
+                    Author on emotional intelligence. Some quick example text.
+                  </p>
+                  <button
+                    type="button"
+                    class="mentor-chat btn btn-primary"
+                    data-ripple=""
+                    data-name="Ashley Zahabian"
+                  >
+                    Chat
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 ict">
+              <div class="card" style="width: 100%">
+                <img
+                  src="ekyarisiima.jpg"
+                  style="max-height: 200px; object-fit: cover"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h6 class="card-title">Carolyne Ekyarisiima</h6>
+                  <p class="card-text post-text">
+                    Computer scientist and founder of Apps & Girls. Some quick
+                    example text.
+                  </p>
+                  <button
+                    type="button"
+                    class="mentor-chat btn btn-primary"
+                    data-ripple=""
+                    data-name="Carolyne Ekyarisiima"
+                  >
+                    Chat
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 modelling">
+              <div class="card" style="width: 100%">
+                <img
+                  src="matata.jpg"
+                  style="max-height: 200px; object-fit: cover"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h6 class="card-title">Flaviana Matata</h6>
+                  <p class="card-text post-text">
+                    Model and entrepreneur. Some quick example text to build on
+                    the card title.
+                  </p>
+                  <button
+                    type="button"
+                    class="mentor-chat btn btn-primary"
+                    data-ripple=""
+                    data-name="Flaviana Matata"
+                  >
+                    Chat
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 entrepreneurship interior-design">
+              <div class="card" style="width: 100%">
+                <img
+                  src="mengi.png"
+                  style="max-height: 200px; object-fit: cover"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h6 class="card-title">Jacqueline Mengi</h6>
+                  <p class="card-text post-text">
+                    Award-winning furniture designer and chairman of Amorette
+                    Ltd; a furniture design and manufacturing company.
+                  </p>
+                  <button
+                    type="button"
+                    class="mentor-chat btn btn-primary"
+                    data-ripple=""
+                    data-name="Jacqueline Mengi"
+                  >
+                    Chat
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 modelling">
+              <div class="card" style="width: 100%">
+                <img
+                  src="magese.jpeg"
+                  style="max-height: 200px; object-fit: cover"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h6 class="card-title">Millen Magese</h6>
+                  <p class="card-text post-text">
+                    world-renowned fashion model and humble humanitarian. Some
+                    quick example text to build on the card title.
+                  </p>
+                  <button
+                    type="button"
+                    class="mentor-chat btn btn-primary"
+                    data-ripple=""
+                    data-name="Millen Magese"
+                  >
+                    Chat
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 music">
+              <div class="card" style="width: 100%">
+                <img
+                  src="wambura.jpg"
+                  style="max-height: 200px; object-fit: cover"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h6 class="card-title">Judith Wambura</h6>
+                  <p class="card-text post-text">
+                    Tanzanian singer. Some quick example text to build on the
+                    card title.
+                  </p>
+                  <button
+                    type="button"
+                    class="mentor-chat btn btn-primary"
+                    data-ripple=""
+                    data-name="Judith Wambura"
+                  >
+                    Chat
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 music">
+              <div class="card" style="width: 100%">
+                <img
+                  src="mfinanga.jpg"
+                  style="max-height: 200px; object-fit: cover"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h6 class="card-title">Faustine Mfinanga</h6>
+                  <p class="card-text post-text">
+                    Tanzanian singer. Some quick example text to build on the
+                    card title.
+                  </p>
+                  <button
+                    type="button"
+                    class="mentor-chat btn btn-primary"
+                    data-ripple=""
+                    data-name="Faustine Mfinanga"
+                  >
+                    Chat
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </li>
+      <li>
+        <section>
+          <header class="w-100 mx-auto row py-2" data-belerise="Inbox">
+            <div class="col d-flex justify-content-center border-bottom">
+              <h4 class="text-white mb-1">Chats</h4>
+            </div>
+          </header>
+          <div class="col">
+            <div
+              class="mentor-chat row w-100 mx-auto border-bottom pb-2 justify-content-center"
+              data-ripple=""
+              data-name="Sangema Abdallah"
+            >
+              <img
+                class="border rounded-circle"
+                style="object-fit: cover; width: 40px; height: 40px"
+                src="sangema.jpg"
+              />
+              <div class="col">
+                <div><b>Sangema Abdallah</b></div>
+                <small class="text-truncate">How are you?</small>
+              </div>
+              <small
+                class="text-muted align-self-end"
+                style="font-size: x-small"
+                >11:00 AM</small
+              >
+            </div>
+            <div
+              class="mentor-chat row w-100 mx-auto border-bottom py-2 justify-content-center"
+              data-ripple=""
+              data-name="Aisha Salum"
+            >
+              <img
+                class="border rounded-circle"
+                style="object-fit: cover; width: 40px; height: 40px"
+                src="https://source.unsplash.com/400x400/?girl,portrait"
+              />
+              <div class="col">
+                <div><b>Aisha Salum</b></div>
+                <small class="text-truncate">Hello</small>
+              </div>
+              <small
+                class="text-muted align-self-end"
+                style="font-size: x-small"
+                >06:00 PM</small
+              >
+            </div>
+          </div>
+        </section>
+      </li>
+      <li>
+        <section>
+          <header class="w-100 mx-auto row py-2" data-belerise="Inbox">
+            <div class="col d-flex justify-content-center border-bottom">
+              <h4 class="text-white mb-1">Profile</h4>
+            </div>
+          </header>
+          <div>
+            <div
+              class="uk-cover-container uk-height-small uk-width-small mx-auto border rounded-circle"
+              data-ripple=""
+            >
+              <img src="sangema.jpg" alt="profile picture" uk-cover />
+            </div>
+            <h6 class="text-center py-2" data-ripple="">Sangema Abdallah</h6>
+          </div>
+          <ul class="list-group rounded-0">
+            <li
+              class="list-group-item border-left-0 border-right-0"
+              data-ripple=""
+              data-toggle="modal"
+              data-target="#quotes-modal"
+            >
+              Saved Quotes
+            </li>
+            <li
+              class="list-group-item border-left-0 border-right-0"
+              data-ripple=""
+            >
+              Edit Profile
+            </li>
+            <li
+              class="list-group-item border-left-0 border-right-0"
+              data-ripple=""
+            >
+              Settings
+            </li>
+            <li
+              class="list-group-item border-left-0 border-right-0"
+              data-ripple=""
+            >
+              About App
+            </li>
+          </ul>
+        </section>
+      </li>
+    </ul>
+
+    <div
+      class="w-100 mx-auto row text-center"
+      style="
+        background-color: #fff;
+        border-top: 1px solid #e0e0e0;
+        position: fixed;
+        bottom: 0px;
+        right: 0px;
+      "
+      uk-switcher="connect: #switcher; animation: uk-animation-fade; toggle: > *"
+    >
+      <button
+        type="button"
+        class="bottom-nav col py-2 btn btn-link"
+        style="border-right: 1px solid #e0e0e0"
+        data-ripple=""
+      >
+        <svg class="bi" width="28" height="28" fill="currentColor">
+          <use xlink:href="bootstrap-icons.svg#house-door-fill" />
+        </svg>
+        <div style="padding: 1px"></div>
+        <small class="uk-position-bottom-center" style="font-size: 10px"
+          >Home</small
+        >
+      </button>
+      <button
+        type="button"
+        class="bottom-nav col py-2 btn btn-link"
+        style="border-right: 1px solid #e0e0e0"
+        data-ripple=""
+      >
+        <svg class="bi" width="28" height="28" fill="currentColor">
+          <use xlink:href="bootstrap-icons.svg#award" />
+        </svg>
+        <div style="padding: 2px"></div>
+        <small class="uk-position-bottom-center" style="font-size: 10px"
+          >Mentorship</small
+        >
+      </button>
+      <button
+        id="chats"
+        type="button"
+        class="bottom-nav col py-2 btn btn-link"
+        style="border-right: 1px solid #e0e0e0"
+        data-ripple=""
+      >
+        <svg class="bi" width="28" height="28" fill="currentColor">
+          <use xlink:href="bootstrap-icons.svg#chat-dots" />
+        </svg>
+        <div style="padding: 2px"></div>
+        <small class="uk-position-bottom-center" style="font-size: 10px"
+          >Chats</small
+        >
+      </button>
+      <button
+        type="button"
+        class="bottom-nav position-relative col py-2 btn btn-link"
+        style="border-right: 1px solid #e0e0e0"
+        data-ripple=""
+      >
+        <svg class="bi" width="28" height="28" fill="currentColor">
+          <use xlink:href="bootstrap-icons.svg#person" />
+        </svg>
+        <div style="padding: 1px"></div>
+        <small class="uk-position-bottom-center" style="font-size: 10px"
+          >Profile</small
+        >
+      </button>
+    </div>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="story-modal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Add Story</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <div data-preview="#story-file-input" id="story-file"></div>
+              <input
+                id="story-file-input"
+                type="file"
+                class="form-control-file"
+                onchange="$('#story-modal').modal('show')"
+                hidden
+              />
+            </div>
+            <div class="form-group">
+              <textarea
+                class="form-control"
+                id="story-text"
+                rows="5"
+              ></textarea>
+            </div>
+            <button id="story-button" type="button" class="btn btn-primary">
+              Add Story
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Chat Modal -->
+    <div class="modal fade" id="chat-modal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body pt-0">
+            <div
+              class="w-100 mx-auto row border-bottom align-items-center py-2"
+            >
+              <div class="col col-auto" data-ripple="">
+                <img
+                  id="chatter-pic"
+                  class="border rounded-circle"
+                  style="width: 48px; height: 48px; object-fit: cover"
+                  src="post.jpg"
+                />
+              </div>
+              <div class="col" data-ripple="">
+                <b id="chatter-name">Username</b>
+              </div>
+              <div class="col col-auto bg-white text-primary" data-ripple="">
+                <svg class="bi" width="24" height="24" fill="currentColor">
+                  <use xlink:href="bootstrap-icons.svg#telephone-fill" />
+                </svg>
+              </div>
+            </div>
+            <div class="pt-2 pb-5 px-3 position-relative" style="height: 100%">
+              <div class="row w-100 mx-auto mb-3 justify-content-end">
+                <div class="col col-8 border rounded py-2">
+                  <small>Hello, how are you doing?</small>
+                </div>
+              </div>
+              <div class="row w-100 mx-auto mb-3">
+                <div class="col col-8 border rounded py-2">
+                  <small>Hi, I'm doing great! How r u?</small>
+                </div>
+              </div>
+              <div
+                class="row w-100 mx-auto position-absolute px-2"
+                style="bottom: 0; left: 0"
+              >
+                <div class="position-relative w-100">
+                  <input
+                    type="text"
+                    class="form-control w-100 rounded-pill"
+                    placeholder="Message..."
+                  />
+                  <button
+                    class="btn btn-link position-absolute rounded-circle bg-white"
+                    style="bottom: 0px; right: 0px"
+                    data-ripple=""
+                  >
+                    <svg class="bi" width="24" height="24" fill="currentColor">
+                      <use xlink:href="bootstrap-icons.svg#cursor-fill" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Quotes Modal -->
+    <div class="modal fade" id="quotes-modal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Saved Quotes</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <ul>
+              <li>
+                <div>
+                  If you’re always trying to be normal you will never know how
+                  amazing you can be.
+                </div>
+                <div class="text-primary">
+                  <b>~ Maya Angelou</b>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.7/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/BossBele/belerise@latest/belerise.js"></script>
+    <script src="preview.js" defer></script>
+    <script src="rippleJs/ripple.js" defer></script>
+    <script src="main.js" defer></script>
+    <script>
+      $(document).ready(function () {
+        setTimeout(() => {
+          $("html").removeClass("loading");
+        }, 1500);
+        $(".bottom-nav").click(function () {
+          let tempAttr = $(this).find("use").attr("xlink:href");
+          $(".bottom-nav").each(function (i, el) {
+            $(el)
+              .find("use")
+              .attr(
+                "xlink:href",
+                $(el).find("use").attr("xlink:href").replace("-fill", "")
+              );
+          });
+          if (tempAttr.match(/fill/i)) {
+            return $(this).find("use").attr("xlink:href", tempAttr);
+          } else {
+            return $(this)
+              .find("use")
+              .attr("xlink:href", tempAttr + "-fill");
+          }
+        });
+        $(".save-quote").click(function () {
+          let tempAttr = $(this).find("use").attr("xlink:href");
+          if (tempAttr.match(/fill/i)) {
+            return $(this)
+              .find("use")
+              .attr("xlink:href", tempAttr.replace("-fill", ""));
+          } else {
+            $(this)
+              .find("use")
+              .attr("xlink:href", tempAttr + "-fill");
+            return UIkit.notification({
+              message: `Quote Saved`,
+              pos: "bottom-center",
+            });
+          }
+        });
+        $(".mentor-chat").click(function () {
+          let name = $(this).data("name"),
+            url = $(this).closest(".card-body").siblings("img").attr("src");
+          if (!url) {
+            url = $(this).find("img").attr("src");
+          }
+          $("#chats").trigger("click");
+          $("#chat-modal").modal("show");
+          $("#chat-modal").find("#chatter-name").text(name);
+          $("#chat-modal").find("#chatter-pic").attr("src", url);
+        });
+        $("#story-button").click(function () {
+          $(".modal").modal("hide");
+          let text = $("#story-text").val();
+          var bg = $("#story-file").css("background-image");
+          bg = bg.replace("url(", "").replace(")", "").replace(/\"/gi, "");
+          let post = `
+          <div
+              class="uk-cover-container uk-height-medium"
+              style="background-color: #e0e0e0"
+            >
+              <img src="${bg}" alt="post" uk-cover />
+            </div>
+            <div class="py-1" style="background-color: #e0e0e0">
+              <small><b>&ensp;Sangema Abdallah</b></small>
+            </div>
+            <p class="col py-2 post-text">
+              ${text}
+            </p>
+          `;
+          $("#stories-feed").append(post);
+        });
+      });
+    </script>
+  </body>
+</html>
